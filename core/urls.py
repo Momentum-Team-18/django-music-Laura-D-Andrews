@@ -22,4 +22,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.post_album_list, name='post-album-list'),
     path('music/<int:pk>', views.album_detail, name='album-detail'),
+    path('music/add-album', views.add_album, name='add-album'),
 ]
