@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,9 +7,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Album</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/picnic">
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
 </head>
 <body>
-    <h1>Add a New Album</h1>
-    {{ form }}
+    <h2>Add an Album</h2>
+    <form method="POST">
+    <div class="add-album-form">
+            {% csrf_token %}
+        {{ form.as_p }}
+        <!-- <input class="add-box" placeholder="Album title" />
+        <input class="add-box" placeholder="Artist" />
+        <input class="add-box" placeholder="Release year" /> -->
+        <button class="submit-button">+</button>
+        </div>
+    </form>
 </body>
 </html>

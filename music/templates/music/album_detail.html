@@ -1,4 +1,4 @@
-
+{% load static %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -7,14 +7,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Album Detail</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/picnic">
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
 </head>
 <body>
     <table class="details-table">
         <thead>
             <tr>
-    <th></th>
-    <p>Title: {{album.title}}</p>
-    <p>Artist: {{ album.artist }}</p>
-    <p>Release Year: {{ album.year }}</p>
+                <th>Title</th>
+                <th>{{ album.title }}</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Artist</td>
+                <td>{{ album.artist }}</td>
+            </tr>
+            <tr>
+                <td>Release Year</td>
+                <td>{{ album.year }}</td>
+            </tr>
+        </tbody>
+    </table>
+</br>
+    <a href="{% url 'delete-album' album.pk %}">
+        <button class="delete-button">delete album</button>
+    </a>
 </body>
 </html>

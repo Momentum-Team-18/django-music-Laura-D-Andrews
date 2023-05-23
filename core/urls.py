@@ -23,4 +23,6 @@ urlpatterns = [
     path('', views.post_album_list, name='post-album-list'),
     path('music/<int:pk>', views.album_detail, name='album-detail'),
     path('music/add-album', views.add_album, name='add-album'),
+    path('music/<int:pk>/delete', views.delete_album, name='delete-album'),
+    path('music/<int:pk>/edit', views.edit_album, name='edit-album'),
 ]
