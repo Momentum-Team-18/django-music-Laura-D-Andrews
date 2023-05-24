@@ -1,15 +1,6 @@
-{% load static %}
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Album Detail</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/picnic">
-    <link rel="stylesheet" href="{% static 'styles.css' %}">
-</head>
+{% extends 'base.html' %}
+{% block title %}Album Detail{% endblock %}
+{% block content %}
 <body>
     <table class="primary">
         <thead>
@@ -30,15 +21,14 @@
         </tbody>
     </table>
 </br>
-<div class="button-links">
-    <a href="{% url 'edit-album' album.pk %}">edit</a>
-</div>
-<div class="button-links">
-    <a href="{% url 'delete-album' album.pk %}">delete</a>
-</div>
-<div class="button-links">
-    <a href="{% url 'post-album-list' %}">home</a>
-</div>
-
+    <div class="button-links">
+        <a href="{% url 'edit-album' album.pk %}">edit</a>
+    </div>
+    <div class="button-links">
+        <a href="{% url 'delete-album' album.pk %}">delete</a>
+    </div>
+    <div class="button-links">
+        <a href="{% url 'post-album-list' %}">home</a>
+    </div>
 </body>
-</html>
+{% endblock %}

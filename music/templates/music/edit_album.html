@@ -1,15 +1,8 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edit Album</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/picnic">
-    <link rel="stylesheet" href="{% static 'styles.css' %}">
-</head>
+{% extends 'base.html' %}
+{% block title %}Edit Album{% endblock %}
+{% block content%}
 <body>
+    <h2>Edit Album</h2>
     <form method="POST">
         <div class="add-edit-album-form">
             {% csrf_token %}
@@ -20,6 +13,5 @@
             <a href="{% url 'post-album-list' %}">home</a>
         </div>     
     </form>
-</form>
 </body>
-</html>
+{% endblock %}

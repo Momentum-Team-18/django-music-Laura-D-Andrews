@@ -1,14 +1,6 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Albums</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/picnic">
-    <link rel="stylesheet" href="{% static 'styles.css' %}">
-</head>
+{% extends 'base.html' %}
+{% block title %}Home{% endblock %}
+{% block content%}
 <body>
     <h2>My albums</h2>
     <div class="button-links">
@@ -24,9 +16,7 @@
                     <button class="favorite">Favorite</button>
             </footer>
         </article>
-         
         {% endfor %}
-    </div>
-    
+    </div> 
 </body>
-</html>
+{% endblock %}
