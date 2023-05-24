@@ -31,9 +31,10 @@ def edit_album(request, pk):
     if request.method == "GET":
         form = AlbumForm(instance=album)
     else:
-        form = AlbumForm(request.POST)
-        form.save()
-        return redirect('album-detail', pk=pk)
+        form = AlbumForm(request.POST, instance=album)
+        if form.is_valid():
+            form.save()
+            return redirect('album-detail', pk=pk)
     return render(request, 'music/edit_album.html', {'form': form})
 
 
