@@ -14,9 +14,13 @@
     <p class='homepage-add-album'><a href="{% url 'add-album' %}"</a>
         <button class="homepage-add-button">Add new album</button>
     </p>
-    {% for album in albums %}
-    <p class='album-title'><a href="{% url 'album-detail' album.pk %}">{{album.title}}</a></p>
-    {% endfor %}
+    <div id="container-box">
+        {% for album in albums %}
+        <div class="album-card">
+            <p class='album-title'><a href="{% url 'album-detail' album.pk %}">{{album.title}}</a></p>
+        </div>
+        {% endfor %}
+    </div>
     
 </body>
 </html>

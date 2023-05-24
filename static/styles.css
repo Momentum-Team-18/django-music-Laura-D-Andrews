@@ -2,29 +2,73 @@
 
 * {
     font-family: poppins;
+    
+}
+
+#container-box {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.album-card {
+    display: flex;
+    background-color: lightgray;
+    width: 30%;
+    height: 100px;
+    border-radius: 0.5em;
+    box-shadow: 0 3px 10px 5px rgb(0 0 0 / 0.5); 
+    margin-bottom: 20px;
+    margin-left: 20px;
+    
 }
 .details-table th {
     background-color: #85144b;
+    margin-left: 20px;
+}
+
+.details-table {
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+h2 {
+    margin-left: 20px;
 }
 
 .album-title {
     font-size: 20px;
+    margin: auto;
+    padding: 20px;
 }
 
 .submit-button {
     background: #85144b;
+   
 }
 
 .add-album-form {
     display: flex;
     flex-direction: column;
     width: 50%; 
+    margin-left: 20px;
 }
+
+.edit-album-form {
+    display: flex;
+    flex-direction: column;
+    width: 50%; 
+    margin-left: 20px;
+}
+
+
 
 .homepage-add-button {
     background-color: #85144b;
+    margin-left: 20px;
 }
 
-.delete-button {
+.edit-button, .delete-button {
     background-color:  #85144b;
+    margin-left: 20px;
 }
+

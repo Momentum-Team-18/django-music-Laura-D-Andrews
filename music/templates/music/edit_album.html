@@ -7,14 +7,13 @@
     <title>Document</title>
 </head>
 <body>
-    <!-- <form method="POST">
-        <table class="details-table">
+    <form method="POST">
+        <div class="edit-album-form">
                 {% csrf_token %}
-                {{ form.as_p }}
-                <input type="submit">  
-    </form> -->
-    <a href="{% url 'edit-album' album.pk %}">
-        <button class="edit-button">edit album</button>
-    </a>
+            {{ form.as_p }}
+            <button class="submit-button">+</button>
+            </div>
+        </form>
+</form>
 </body>
 </html>
