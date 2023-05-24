@@ -13,11 +13,16 @@
 <body>
     <h2>Add an Album</h2>
     <form method="POST">
-        <div class="add-album-form">
+        <div class="add-edit-album-form">
             {% csrf_token %}
             {{ form.as_p }}
-            <button class="myCoolButton">+</button>
         </div>
+        <div class="button-links">
+            <a href="{% url 'add-album' %}">add album</a>
+        </div> 
+        <div class="button-links">
+            <a href="{% url 'post-album-list' %}">home</a>
+        </div>     
     </form>
 </body>
 </html>

@@ -43,33 +43,29 @@ h2 {
 }
 
 .submit-button {
-    background: #85144b;
-   
+    background: #85144b; 
 }
 
-.add-album-form {
+
+.add-edit-album-form {
     display: flex;
     flex-direction: column;
     width: 50%; 
     margin-left: 20px;
 }
 
-.edit-album-form {
-    display: flex;
-    flex-direction: column;
-    width: 50%; 
-    margin-left: 20px;
-}
-
-
-
-.myCoolButton {
+/* .myCoolButton {
     background-color: #85144b;
     margin-left: 20px;
-}
+} */
 
-.edit-button, .delete-button {
+.button-links {
     background-color:  #85144b;
     margin-left: 20px;
+    margin-bottom: 20px; ;
+    padding: 5px;
+    width: 34%; 
+    border-radius: 0.5em;
+    text-align: center;  
 }
 
