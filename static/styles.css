@@ -10,23 +10,24 @@
     flex-wrap: wrap;
 }
 
-.album-card {
+.card {
     display: flex;
-    background-color: lightgray;
-    width: 30%;
-    height: 100px;
-    border-radius: 0.5em;
-    box-shadow: 0 3px 10px 5px rgb(0 0 0 / 0.5); 
-    margin-bottom: 20px;
-    margin-left: 20px;
-    
+    width: 300px;
+    height: 150px;
+    margin: 10px; 
+    background-color: azure;
 }
-.details-table th {
+
+.favorite {
+    font-size: 10px;
+    margin: auto; 
+}
+.primary th {
     background-color: #85144b;
     margin-left: 20px;
 }
 
-.details-table {
+.primary {
     margin-left: 20px;
     margin-top: 20px;
 }
@@ -36,9 +37,9 @@ h2 {
 }
 
 .album-title {
-    font-size: 20px;
+    font-size: 16px;
     margin: auto;
-    padding: 20px;
+    padding: 20px, 0px; 
 }
 
 .submit-button {
@@ -62,7 +63,7 @@ h2 {
 
 
 
-.homepage-add-button {
+.myCoolButton {
     background-color: #85144b;
     margin-left: 20px;
 }

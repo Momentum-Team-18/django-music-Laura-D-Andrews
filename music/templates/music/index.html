@@ -12,13 +12,17 @@
 <body>
     <h2>My albums</h2>
     <p class='homepage-add-album'><a href="{% url 'add-album' %}"</a>
-        <button class="homepage-add-button">Add new album</button>
+        <button class="myCoolButton">Add new album</button>
     </p>
     <div id="container-box">
         {% for album in albums %}
-        <div class="album-card">
-            <p class='album-title'><a href="{% url 'album-detail' album.pk %}">{{album.title}}</a></p>
-        </div>
+        <article class="card">
+            <footer>
+                <p class='album-title'><a href="{% url 'album-detail' album.pk %}">{{album.title}}</a></p>
+                    <button class="favorite">Favorite</button>
+            </footer>
+        </article>
+         
         {% endfor %}
     </div>
     

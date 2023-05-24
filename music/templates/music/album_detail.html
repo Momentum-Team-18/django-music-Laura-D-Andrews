@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="{% static 'styles.css' %}">
 </head>
 <body>
-    <table class="details-table">
+    <table class="primary">
         <thead>
             <tr>
                 <th>Title</th>
@@ -30,11 +30,7 @@
         </tbody>
     </table>
 </br>
-    <a href="{% url 'edit-album' album.pk %}">
-        <button class="edit-button">edit album</button>
-    </a>
-    <a href="{% url 'delete-album' album.pk %}">
-        <button class="delete-button">delete album</button>
-    </a>
+    <a href="{% url 'edit-album' album.pk %}">edit</a>
+    <a href="{% url 'delete-album' album.pk %}">delete</a>
 </body>
 </html>

@@ -5,4 +5,4 @@ from .models import Album
 class AlbumForm(forms.ModelForm):
     class Meta:
         model = Album
-        fields = ('title', 'artist', 'year')
+        fields = ('title', 'artist', 'year', 'is_active')
