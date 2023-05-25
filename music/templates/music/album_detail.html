@@ -19,6 +19,10 @@
                 <td>Release Year</td>
                 <td>{{ album.year }}</td>
             </tr>
+                {% if album.label %}
+                <td>Record Label</td>
+                <td>{{ album.label }}</td>
+                {% endif %}
         </tbody>
     </table>
 </br>
