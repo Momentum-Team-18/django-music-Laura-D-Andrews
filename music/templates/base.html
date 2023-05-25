@@ -10,9 +10,13 @@
     <link rel="stylesheet" href="{% static 'styles.css' %}">
 </head>
 <body>
-    <header><h4>header</h4></header>
+    <header class="header">
+    <div class="header-text">{% block header%}{% endblock %}</div>
+    </header>
     {% block content %}
     {% endblock %}
-    <footer><h4>footer</h4></footer>
+    <footer class="footer">
+        <div class="footer-text">{% block footer%}{% endblock %}</div>
+    </footer>
 </body>
 </html>
