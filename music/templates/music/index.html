@@ -1,11 +1,14 @@
 {% extends 'base.html' %}
 {% block title %}Home{% endblock %}
-<body>
-    {% block header %}Albums{% endblock %}
-    {% block content%}
+{% block header %}Albums{% endblock %}
+{% block content %}
     <div class="button-links">
         <a href="{% url 'add-album' %}">add album</a>
     </div>
+    <div class="button-links">
+        <a href="{% url 'artist-list' %}">albums by artist</a>
+    </div>
+    
     <div id="container-box">
         {% for album in albums %}
         <article class="card">
@@ -16,6 +19,6 @@
         </article>
         {% endfor %}
     </div> 
-</body>
 {% endblock %}
 {% block footer%}{% endblock %}
+

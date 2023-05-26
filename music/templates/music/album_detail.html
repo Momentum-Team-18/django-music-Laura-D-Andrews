@@ -1,8 +1,7 @@
 {% extends 'base.html' %}
 {% block title %}Album Detail{% endblock %}
-<body>
-    {% block header %}Album Information{% endblock %}
-    {% block content%}
+{% block header %}Album Information{% endblock %}
+{% block content%}
     <table class="primary">
         <thead>
             <tr>
@@ -31,12 +30,11 @@
     </div>
   
     <button class="button-links" onclick="deleteAlbum()">delete</button>
-        <a href="{% url 'delete-album' album.pk %}"</a>
+        <a href="{% url 'delete-album' album.pk %}">delete</a>
 
     
     <div class="button-links">
         <a href="{% url 'post-album-list' %}">home</a>
     </div>
-</body>
 {% endblock %}
 {% block footer%}{% endblock %}

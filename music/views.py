@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from .forms import AlbumForm
-from .models import Album
+from .models import Album, Artist
 
 
 # Create your views here.
@@ -9,6 +9,11 @@ from .models import Album
 def post_album_list(request):
     albums = Album.objects.all()
     return render(request, 'music/index.html', {'albums': albums})
+
+
+def artist_list(request):
+    artists = Artist.objects.all()
+    return render(request, 'music/artist_list.html', {'artists': artists})
 
 
 def album_detail(request, pk):
@@ -42,3 +47,13 @@ def delete_album(request, pk):
     album = get_object_or_404(Album, pk=pk)
     album.delete()
     return redirect('post-album-list')
+
+
+def albums_by_artist(request, pk):
+    artist = get_object_or_404(Artist, pk=pk)
+    albums = Album.objects.filter(artist_id=pk)
+    context = {
+        'artist': artist,
+        'albums': albums,
+    }
+    return render(request, 'music/albums_by_artist.html', context)

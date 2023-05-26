@@ -1,8 +1,7 @@
 {% extends 'base.html' %}
 {% block title %}Edit Album{% endblock %}
-<body>
-    {% block header %}Edit Albums{% endblock %}
-    {% block content%}
+{% block header %}Edit Albums{% endblock %}
+{% block content%}
     <form method="POST">
         <div class="add-edit-album-form">
             {% csrf_token %}
@@ -13,6 +12,5 @@
             <a href="{% url 'post-album-list' %}">home</a>
         </div>     
     </form>
-</body>
 {% endblock %}
 {% block footer%}{% endblock %}

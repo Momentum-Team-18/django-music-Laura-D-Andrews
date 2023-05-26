@@ -25,4 +25,6 @@ urlpatterns = [
     path('music/add-album', views.add_album, name='add-album'),
     path('music/<int:pk>/delete', views.delete_album, name='delete-album'),
     path('music/<int:pk>/edit', views.edit_album, name='edit-album'),
+    path('artist/<int:pk>', views.albums_by_artist, name="albums-artist"),
+    path('artists', views.artist_list, name="artist-list"), 
 ]
