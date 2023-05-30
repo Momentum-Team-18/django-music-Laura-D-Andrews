@@ -12,10 +12,9 @@
     <div id="container-box">
         {% for album in albums %}
         <article class="card">
-            <footer>
                 <p class='album-title'><a href="{% url 'album-detail' album.pk %}">{{album.title}}</a></p>
-                    <button class="favorite">Favorite</button>
-            </footer>
+                <a img src="{% url 'add-image' %}">{{ image.title }}</a>
+                </div>
         </article>
         {% endfor %}
     </div> 
