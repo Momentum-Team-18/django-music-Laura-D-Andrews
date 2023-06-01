@@ -6,13 +6,12 @@
 <div class="button-links">
     <a href="{% url 'post-album-list' %}">home</a>
 </div> 
+<div id="container-box">
 {% for album in albums %}
-<article class="card">
-    <footer>
+    <article class="card">
         <p class='album-title'>{{album.title}}</a></p>
-            <button class="favorite">Favorite</button>
-    </footer>
-</article>
+    </article>
+</div>
 {% endfor %}
 {% endblock %}
 {% block footer%}{% endblock %}

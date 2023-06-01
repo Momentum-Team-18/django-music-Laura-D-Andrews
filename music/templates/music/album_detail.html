@@ -29,10 +29,9 @@
         <a href="{% url 'edit-album' album.pk %}">edit</a>
     </div>
   
-    <button class="button-links" onclick="deleteAlbum()">delete</button>
+    <div class="button-links">
         <a href="{% url 'delete-album' album.pk %}">delete</a>
-
-    
+    </div>
     <div class="button-links">
         <a href="{% url 'post-album-list' %}">home</a>
     </div>

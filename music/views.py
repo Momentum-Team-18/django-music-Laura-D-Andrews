@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404, redirect
-from .forms import AlbumForm, ImageForm
-from .models import Album, Artist, Image
+from .forms import AlbumForm
+from .models import Album, Artist
 
 
 # Create your views here.
@@ -25,7 +25,7 @@ def add_album(request):
     if request.method == 'GET':
         form = AlbumForm()
     else:
-        form = AlbumForm(request.POST)
+        form = AlbumForm(request.POST, request.FILES)
         form.save()
         return redirect('post-album-list')
     return render(request, 'music/add_album.html', {'form': form})
@@ -57,25 +57,3 @@ def albums_by_artist(request, pk):
         'albums': albums,
     }
     return render(request, 'music/albums_by_artist.html', context)
-
-
-def image_by_album(request, pk):
-    image = get_object_or_404(Image, pk=pk)
-    albums = Album.objects.filter(album_id=pk)
-    context = {
-        'image': image,
-        'albums': albums,
-    }
-    return render(request, 'music/index.html', context)
-
-
-def image_upload_view(request):
-    if request.method == 'POST':
-        form = ImageForm(request.POST, request.FILES)
-        if form.is_valid():
-            form.save()
-            img_obj = form.instance
-            return render(request, 'music/add_image.html', {'form': form, 'img_obj': img_obj})
-    else:
-        form = ImageForm()
-    return render(request, 'music/add_image.html', {'form': form})

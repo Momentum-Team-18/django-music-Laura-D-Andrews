@@ -29,8 +29,6 @@ urlpatterns = [
     path('music/<int:pk>/edit', views.edit_album, name='edit-album'),
     path('artist/<int:pk>', views.albums_by_artist, name="albums-artist"),
     path('artists', views.artist_list, name="artist-list"),
-    path('upload/', views.image_upload_view, name="add-image"),
-
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

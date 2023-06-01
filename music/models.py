@@ -9,13 +9,12 @@ class Album(models.Model):
     artist = models.ForeignKey(to="Artist", on_delete=models.CASCADE)
     year = models.IntegerField(blank=True, null=True)
     created_at = models.DateTimeField(default=timezone.now)
-    is_active = models.BooleanField(default=True)
     label = models.ForeignKey(
         to="Label", on_delete=models.CASCADE, blank=True, null=True)
+    image = models.ImageField(upload_to='images/')
 
-
-def __str__(self):
-    return self.title
+    def __str__(self):
+        return self.title
 
 
 class Label(models.Model):
@@ -30,12 +29,3 @@ class Artist(models.Model):
 
     def __str__(self):
         return self.name
-
-
-class Image(models.Model):
-    title = models.CharField(max_length=100)
-    image = models.ImageField(upload_to='images')
-    album = models.ForeignKey(to="Album", on_delete=models.CASCADE)
-
-    def __str__(self):
-        return self.title
