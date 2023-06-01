@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block title %}Add Album{% endblock %}
+{% block header %}Add Album{% endblock %}
+{% block content%}
+    <form method="POST">
+        <div class="add-edit-album-form">
+            {% csrf_token %}
+            {{ form.as_p }}
+        </div>
+        <div class="button-links">
+            <button type="submit">add album</button>
+        </div> 
+    </form>
+        <div class="button-links">
+            <a href="{% url 'post-album-list' %}">home</a>
+        </div> 
+
+    
+
+{% endblock %}
+{% block footer%}{% endblock %}

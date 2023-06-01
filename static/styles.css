@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;700&family=Nunito+Sans:wght@300;600&family=Poppins:wght@100;200;300;400&family=Raleway:wght@100;300;400;600&family=Roboto+Mono:wght@500&family=Rubik:wght@300;400;600&family=Source+Sans+Pro:wght@200;400;600&display=swap');
+
+* {
+    font-family: poppins;  
+}
+
+body {
+    background-color: #E5E5E5;
+}
+.header {
+    text-align: center;
+    padding: 20px 25px;
+    margin-bottom: 20px;
+    border-bottom: 10px solid #F1C47B;
+    background-color: #08203E;
+    color: white;
+}
+.header-text {
+    font-size: 36px;
+}
+
+.button-links a:link {
+    color: white;
+    
+}
+.button-links a:visited {
+    color: white;  
+}
+
+#container-box {
+    display: flex;
+    flex-wrap: wrap;
+}
+.card {
+    display: flex;
+    width: 275px;
+    height: 150px;
+    margin: 20px; 
+    background-color: #4C7189;
+}
+
+.favorite {
+    font-size: 10px;
+    margin: auto; 
+    background-color: white;
+    color: #08203E;
+}
+.primary th {
+    background-color: #4C7189;
+    margin-left: 20px;
+}
+
+.primary {
+    margin-left: 20px;
+    margin-top: 65px;
+}
+
+.album-title {
+    font-size: 16px;
+    margin: auto;
+    padding: 20px, 0px; 
+}
+
+.album-title a:link {
+    color: white;
+    
+}
+.album-title a:visited {
+    color: white;  
+}
+
+.add-edit-album-form {
+    display: flex;
+    flex-direction: column;
+    width: 50%; 
+    margin-left: 20px;
+}
+
+.button-links {
+    background-color:  #F1C47B;
+    margin-left: 20px;
+    margin-bottom: 20px; ;
+    padding: 5px;
+    width: 275px; 
+    border-radius: 0.5em;
+    text-align: center;  
+}
+
+.footer {
+    margin-top: 300px;
+    border-top: 15px solid #F1C47B;  
+}

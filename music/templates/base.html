@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> {% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/picnic">
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <script src="{% static 'main.js' %}"></script>
+</head>
+<body>
+    <header class="header">
+    <div class="header-text">{% block header%}{% endblock %}</div>
+    </header>
+    {% block content %}
+    {% endblock %}
+    <footer class="footer">
+        <div class="footer-text">{% block footer%}{% endblock %}</div>
+    </footer>
+</body>
+</html>
