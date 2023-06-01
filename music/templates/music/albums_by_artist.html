@@ -1,3 +1,4 @@
+
 {% extends 'base.html' %}
 {% block title %}Albums by Artist{% endblock %}
 {% block header %}Albums by Artist{% endblock %}
@@ -7,11 +8,12 @@
     <a href="{% url 'post-album-list' %}">home</a>
 </div> 
 <div id="container-box">
-{% for album in albums %}
-    <article class="card">
-        <p class='album-title'>{{album.title}}</a></p>
-    </article>
+    {% for album in albums %}
+        <article class="card">
+            <p class='album-title'>{{album.title}}</a></p>
+        </article>
 </div>
 {% endfor %}
 {% endblock %}
 {% block footer%}{% endblock %}
+

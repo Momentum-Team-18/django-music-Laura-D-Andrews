@@ -1,18 +1,17 @@
+
 {% extends 'base.html' %}
 {% block title %}Albums by Artist{% endblock %}
 {% block header %}Albums by Artist{% endblock %}
 {% block content %}
-<div class="albums_artist_heading">Artists</div>
 <div class="button-links">
     <a href="{% url 'post-album-list' %}">home</a>
 </div> 
-{% for artist in artists %}
-<article class="card">
-    <footer>
-        <a class="album-title" href="{% url 'albums-artist' artist.pk %}">{{ artist }}</a>
-            <button class="favorite">Favorite</button>
-    </footer>
-</article>
-{% endfor %}
+<div id="container-box">
+    {% for artist in artists %}
+        <article class="card">
+            <a class="album-title" href="{% url 'albums-artist' artist.pk %}">{{ artist }}</a>
+        </article>
+    {% endfor %}
+</div>
 {% endblock %}
 {% block footer%}{% endblock %}

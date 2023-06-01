@@ -1,3 +1,4 @@
+
 {% extends 'base.html' %}
 {% block title %}Album Detail{% endblock %}
 {% block header %}Album Information{% endblock %}
@@ -22,6 +23,12 @@
                 <td>Record Label</td>
                 <td>{{ album.label }}</td>
                 {% endif %}
+            <tr>
+                {% if album.image %}
+                <td>Album Cover</td>
+                <td><a href="{% url 'album-detail' album.pk %}"><img src="{{ album.image.url }}" width="125"></a></td>
+                {% endif %}
+            </tr>
         </tbody>
     </table>
 </br>

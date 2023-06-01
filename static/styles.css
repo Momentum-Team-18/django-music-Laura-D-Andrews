@@ -5,14 +5,14 @@
 }
 
 body {
-    background-color: #E5E5E5;
+    background-color: #EDEDE9;
 }
 .header {
     text-align: center;
     padding: 20px 25px;
     margin-bottom: 20px;
-    border-bottom: 10px solid #F1C47B;
-    background-color: #08203E;
+    border-bottom: 10px solid #D6CCC2;
+    background-color: #E2DDD6;
     color: white;
 }
 .header-text {
@@ -33,20 +33,17 @@ body {
 }
 .card {
     display: flex;
-    width: 275px;
-    height: 150px;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 300px;
+    height: 200px;
     margin: 20px; 
-    background-color: #4C7189;
+    background-color: #F5EBE0;
 }
 
-.favorite {
-    font-size: 10px;
-    margin: auto; 
-    background-color: white;
-    color: #08203E;
-}
 .primary th {
-    background-color: #4C7189;
+    background-color: #555B6E;
     margin-left: 20px;
 }
 
@@ -62,11 +59,11 @@ body {
 }
 
 .album-title a:link {
-    color: white;
+    color: #555B6E;
     
 }
 .album-title a:visited {
-    color: white;  
+    color: #555B6E;  
 }
 
 .add-edit-album-form {
@@ -77,7 +74,7 @@ body {
 }
 
 .button-links {
-    background-color:  #F1C47B;
+    background-color:  #555B6E;
     margin-left: 20px;
     margin-bottom: 20px; ;
     padding: 5px;
@@ -86,7 +83,15 @@ body {
     text-align: center;  
 }
 
+.button-links button {
+    background-color:  #555B6E;
+}
+
 .footer {
     margin-top: 300px;
-    border-top: 15px solid #F1C47B;  
+    border-top: 15px solid #D6CCC2;  
 }
+
+
+
+
