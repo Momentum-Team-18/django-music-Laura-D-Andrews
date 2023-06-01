@@ -2,7 +2,7 @@
 {% block title %}Add Album{% endblock %}
 {% block header %}Add Album{% endblock %}
 {% block content%}
-    <form method="POST">
+    <form method="POST" enctype="multipart/form-data">
         <div class="add-edit-album-form">
             {% csrf_token %}
             {{ form.as_p }}
